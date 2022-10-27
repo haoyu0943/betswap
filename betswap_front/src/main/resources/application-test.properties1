@@ -1,0 +1,15 @@
+#临时文件路径
+spring.datasource.driver-class-name = com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://8.142.85.55/betswap_test?setUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+spring.datasource.username=ENC(VZGjwMvRi+c340pw0nqYWw==)
+spring.datasource.password=ENC(gyfs7xNSjsPyguw5glZmg51Ajx6X4MjN)
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=false
+
+#临时文件路径
+com.tempPath = /root/temp/
+
+
+
+
+

@@ -1,0 +1,161 @@
+server:
+  servlet:
+    context-path: /api/v1
+  port: 8002
+
+spring:
+  mail:
+    username: PublicMember@yqxc.info
+    password: pz8wqe7JqPZeqhuB
+    host: smtp.exmail.qq.com
+
+  data:
+    redis:
+      repositories:
+        enabled: false
+
+  redis:
+    #host: 123.57.237.249
+    host: 18.142.168.39
+    port: 6377
+    password: Yijiang2021
+    #Redis数据库索引（默认为0）
+    database: 0
+    timeout: 30000
+    maxTotal: 30
+    maxIdle : 10
+    maxWaitMillis: 1500
+    blockWhenExhausted: false
+    JmxEnabled: true
+    jedis:
+      pool:
+        max-active: 50  #连接池最大连接数（使用负值表示没有限制）
+        max-wait: 3000  #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 20    #连接池中的最大空闲连接
+        min-idle: 2     #连接池中的最小空闲连接
+      #连接超时时间（毫秒）
+      timeout: 5000
+
+  application:
+    name: springboot-jwt
+  #配置文件传输
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 0
+      # 上传文件总的最大值
+      max-request-size: 100MB
+      # 单个文件的最大值
+      max-file-size: 100MB
+
+config:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      ddl-auto: update
+    show-sql: true
+  token:
+    secret: abcdefg1234567  # 加密密钥
+    expire: 2592000            # token有效时长--30天
+    header: userToken           # header 名称
+  captcha:
+    # 加密密钥
+    secret: 1234567abcdefg
+    # token有效时长
+    expire: 120
+    # header 名称
+    header: kaptcha
+  sms:
+    secret: qwertyu321654987
+    expire: 300
+    header: sms_token
+  mail:
+    secret: qwertyu321654987
+    expire: 300
+    header: sms_token
+
+icbc:
+  MY_PRIVATE_KEY: "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCDjCbPNbIonu1VwKczA3RWFwDZczz6Udv7ggoQtPBnUiOPZtppnH1bp1cF9+HdII3BzRCFrtRnuPFDxGvWQmSnbENtT1Xm40d01PPpB1ArxPe7/5TRCCsrdfbPFqn4cJMgH9lmMsn0op55n5nTR3ojBqMbJ8Z0uML2OgvVjGpb12dNX5FtNbmcrEFwN3PFtzp1i23OUhXVWs6McERwDAOqDbBeUHmxjUUO6o16a0fJMZErn4JisRNyndzO0IcjhHpvDKDalxWBrcjGPSJONiBAHHxWUrTqzta5RSF4n2j9FBpe3bXUwxLEx4ruRkuGI8oHl4+C0hSwePXaQVMyoIZHAgMBAAECggEATKp619qwiXIOWiLcjyOdQqtHaHP7/tuEfLFOEmyRi3XYmbPU6SY1/Ruq4SSVsx1M4L0VuwOocQbdPaSVQJsTNGwpY+SP6O9e7t1Jhe8oL0otI5kR7z12g27Nt+W6i7t4U4mcVy6UewnnmHSG3xbSPOWaW7IzvEUOAxjTWtLqDbnDYpZ1MBZk3Sw9gACk6A8/8vOMEkOCCo3YpsBH7eRB6Vy+u5oGsYJJhAMgOkFcyBhdM3ddP++99SyAogHMjFRh1LNOu2T6RLQk0jPiUJOaJkHtu/bHpWBUjcPx2mZ9Q59DITIjS5Ak5X52Mb4pSzKZ3Dlgf6yBEm2ZWWT+Xb/nWQKBgQDeuNU/sdxPZuQcQntwnYtkzih1jVBgboSH1ubJUA9fFD/G5Tinuml6n4TlVoIkNtvSCk0L7sufVnhUyy0HCIfLC/XLQIsL28tAfJXsSlnUXYgX+VZrslAJhZu88FFb0cuCV/CVCP/Pax7kCkf637zlRPYvXg1GdUaI0R1y4+kJlQKBgQCXM984flOHzC8d/DxiipvpsVz7+1SyPpN/k00nhHf+/z4rsN2gpuKD9PdEED+bY2IheDjmxutpqVEy9OyFFaAksViW1dds/LLtlhAkHBjeR+ggMzZfPm8Qj448qEKGhdmoFvoS7jsBhW4Z9qu2vUILC7t9etrg4nVx9//rTtQxawKBgHLlpVVbmwz3Rnxxq56YF74kQGkMQsfMm+A79AksnRFur8wamlSk7R9ORc/OBgtKpbJAkCi0wyTrBd6whgUX2H3eKKn3HQQ8GimlW+5vGNJeggPkJDog3ftbitE4pLAalcMjPMCVyOonF+OKjkGUxKz+G4aqHW0YuQ+B2ZBYlPLVAoGAVmEL5PpGPg4n3Ll8xc7pw1fQByRN/oZBPWCpcyn6Y3Lt0Yf5FQ5B2aDYocmmjN758KT93NlHI9XWzYWemWkBU/T85y7DI0A5+AECt55Vlqb9tWeMaF0CljNszrpRRwiwj5aQxr/SdcwEWlDRSFRWpnjNY6IL6O12quVDDuq5zoECgYAr957tR9lSHXhtWLwq6pjjJ6Xwfx2lLjGCZomk7eO8GxylfqHQ4ifByZAIxGmehuVkD0DSrtK+hWfp92ee0SfSv3cUwi8PvcIE0xHBWA8ByCaSgeulZsnTgpqisiT07ssqfnA/4IGzjtu1dERDgQ6mVAw3Uw33aX8Rs68XHJaybg=="
+  MY_PUBLIC_KEY : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtXIKt+1eLOvEKzwWqxMCmPc+gNa0x4BszcXBMow7iLnYkTYf37iB94bFTTy5tNmNgMCts1c46ApHluKJQdkyK5PK0/TSnCVjI+K8qYoDyAmhWVae7k8o+eOQZwxYxAlv/XneJJdtbi9zVNikdi+NK83rPBqA7bb9G5G8PWs+HlPi4jkQAJl5FoNl7awchg9mFuh0nkDkVsvXWdJHv8x53HpbiLNkyndyarqHqg1oiQn4/JcOsDuL7b1StHjxchT/NKUcyQkIpRmTuuvRx4yUChJDEB7KPmQtEPhGD19VmLA9bQ7vyBTd5c0ke/FGRW0z24M14KmdupYBQTgHxYv/LwIDAQAB"
+  APIGW_PUBLIC_KEY_GENERAL_BANK : "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCMpjaWjngB4E3ATh+G1DVAmQnIpiPEFAEDqRfNGAVvvH35yDetqewKi0l7OEceTMN1C6NPym3zStvSoQayjYV+eIcZERkx31KhtFu9clZKgRTyPjdKMIth/wBtPKjL/5+PYalLdomM4ONthrPgnkN4x4R0+D4+EBpXo8gNiAFsNwIDAQAB"
+  APIGW_PUBLIC_KEY_BEIJING_SUB : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhlbWfhRDJj4GcyIs/smDpVtW3ul2Y3HQpZ2gOak2QuLbmmczDekR+MxTkECogzSWvCfgSE1mFDEKuZJomebejGBcSnGNZ+APyf8u0gi7g7wYN0ptyuxJJEPzQ5HnB7selEPQ8Va7aUZOGfEBGgxtacrMPh0XAWWvXVH8OVq1+mEiPhnWCAeUyA6bFrW9Ao0H7sb9AfcOp9lbEBO8sS0kraxyXxhQa9Q+gqohj4iiFRFo7TpoAgB87sH8EPSLltoZZAzcuk5Rr8H89YKs37/w8kosPzl9FMjl10Txu+3hBHxqQ0Krxd4Lf3RGHKnbgNvEk+0DoH286TPNcq5qOHLDJQIDAQAB"
+  APPID : "10000000000003191307"
+  BASE_URL : "https://gw.open.icbc.com.cn/api"
+  AES_KEY : "gxf83jE4d2KGcJEgAd3QJQ=="
+  PROJECT_ID : "PJ99001805B000148630"
+  CORP_CIS : "020090008694466"
+  flag : "success"
+
+#fisco:
+#  peers: "123.57.237.249:20200"
+#  certPath: "conf"
+#  hexPrivateKey:
+#  groupId : 1
+#  contract:
+#    nftAddress: "0x67b0fa958deba6296508b3fba5a734e3e091fa93"
+#  webaseUrl: "http://123.57.237.249:5002/WeBASE-Front/trans/signed-transaction"
+
+#sms:
+#  secretId: "AKIDQgfNq42jAKDo9E2arte8LHxNWOzJM7cm"
+#  secretKey: "vZw2rPhhQs3ybx2qOghRu61e06uRiiQr"
+#  SmsSdkAppid: "1400566775"
+#  TemplateID: "1098940"
+#  Signature: "FolkSpace"
+
+sms:
+  secretId: "AKIDEiPCmCxDLDsHrewRhhareONpp6Wm4Tv7"
+  secretKey: "41ZAabOvd5GkHdl5GBpBg180Wv4wWAdp"
+  SmsSdkAppid: "1400480793"
+  TemplateID: "859232"
+  Signature: "奕江科技"
+
+blockchain:
+  id: "ff60c023dd10c1db5cba4c9cf8be76634bafd07811062ad39c13ef579061219f"
+
+com:
+  mail:
+    title:    "注册验证码"
+    identity: "奕江科技"
+    from : PublicMember@yqxc.info
+    username: PublicMember@yqxc.info
+    password: pz8wqe7JqPZeqhuB
+    host: smtp.exmail.qq.com
+
+platform:
+  private_key: "7233ac0f2ded9719b828cb495d8ca2d90c5e6c36f49b9771331bc9274f138fc2"
+  public_key : "04c0222cf005ae811aa214d9b98733f6f813a6ac63facb1d8ecee0d7f633b7c04be4600c971c6b9030e80bd5ac84c1ecac38de6f485a809dabec3698a877acbc30"
+  address: "0xd1f6f665ea45aca059ffb2a24b28e092016b2045"
+
+swagger:
+  config:
+    basePackage: com.betswap.market.adapter
+    title: Betswap API Document.
+    description: Provide Betswap relasted interface.
+    version: 1.0
+
+wechat:
+  app_id: wx27f3f14d55e5ab22
+  app_secret : 908b66777d552402a45bf2334552bfee
+  redirect_url : www.folkspace.cn
+
+user:
+  default:
+    avatar: /images/cover/default/avatar.png
+
+auction_rule:
+#  payTime:   259200000 #尾款支付时间
+#
+#  baseRange: 1999  #起步区间
+#  baseDeposit: 100 #起步区间保证金
+#  changeStep: 1000 #阶梯区间
+#  stepDeposit: 100 #阶梯区间保证金
+  payTime:   259200000 #尾款支付时间
+
+  baseRange: 1999  #起步区间
+  baseDeposit: 100 #起步区间保证金
+  changeStep: 1000 #阶梯区间
+  stepDeposit: 100 #阶梯区间保证金
+
+#  switch:   是否开启日志开关
+log:
+    switch: false

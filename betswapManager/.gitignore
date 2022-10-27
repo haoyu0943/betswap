@@ -1,0 +1,9 @@
+*.iml
+.idea/
+overlays/
+target/
+*.releaseBackup
+release.properties
+doc/doc-service-msoffice-impl/templateconfig/out/
+classes/production/
+logs/

@@ -1,0 +1,204 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <artifactId>betswapManager</artifactId>
+    <groupId>jfinal-demo</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>jfinal-web</artifactId>
+  <packaging>war</packaging>
+  <name>jfinal-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+  </properties>
+
+  <!-- 使用阿里 maven 库 -->
+  <repositories>
+    <repository>
+      <id>ali-maven</id>
+      <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+      <!--<url>https://maven.aliyun.com/repository/central</url>-->
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>cos</artifactId>
+      <version>26Dec2008</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-utils</artifactId>
+      <version>3.0.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.12</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jdbc</artifactId>
+      <version>9.0.41</version>
+    </dependency>
+
+
+
+    <dependency>
+      <groupId>com.mchange</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.5.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal-ext</artifactId>
+      <version>3.1.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal-ext2</artifactId>
+      <version>2.0.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal-ext3</artifactId>
+      <version>4.0.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>activerecord</artifactId>
+      <version>4.9.10</version>
+    </dependency>
+
+    <dependency>
+       <groupId>javax.servlet</groupId>
+       <artifactId>servlet-api</artifactId>
+       <version>2.5</version>
+       <scope>provided</scope>
+     </dependency>
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+
+
+     <dependency>
+       <groupId>javax.servlet</groupId>
+       <artifactId>javax.servlet-api</artifactId>
+       <version>3.0.1</version>
+       <scope>provided</scope>
+     </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.14</version>
+    </dependency>
+
+    <dependency>
+      <groupId>cn.rongcloud.im</groupId>
+      <artifactId>server-sdk-java</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <!-- JSTL -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!-- JSTL实现包 -->
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-impl</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+      <version>3.8.1</version>
+    </dependency>
+
+    <!--
+        <dependency>
+          <groupId>com.jfinal</groupId>
+          <artifactId>jetty-server</artifactId>
+          <version>8.1.8</version>
+          <scope>compile</scope>
+        </dependency>
+
+            <dependency>
+              <groupId>com.jfinal</groupId>
+              <artifactId>cos</artifactId>
+              <version>2017.5</version>
+            </dependency>
+            <dependency>
+              <groupId>org.eclipse.jetty</groupId>
+              <artifactId>jetty-jsp</artifactId>
+              <version>8.1.8.v20121106</version>
+            </dependency>
+              -->
+
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>4.9.1</version>
+    </dependency>
+
+
+  </dependencies>
+  <build>
+    <finalName>jfinal-web</finalName>
+  </build>
+</project>

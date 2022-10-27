@@ -1,0 +1,74 @@
+*{margin:0px;padding:0px;}
+body,html{font-family:"Microsoft YaHei";font-size:12px;color:#666;}
+ul li{list-style:none;}
+a{text-decoration:none;color:#2b2b2b;}
+#alert-mark{width:100%;height:100%;position:fixed;left: 0px;top: 0px;z-index: 998;background: #000;behavior: url(PIE.htc);opacity: 0.8;filter: alpha(opacity=80);}
+.yy-alert{width: 400px;height: auto;
+position: fixed;left: 0;
+top: 25%;
+z-index: 999999;
+font-family:"Microsoft YaHei";
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+border: 1px solid rgba(0, 0, 0, .2);
+border-radius: 6px;
+outline: 0;
+-webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+box-shadow: 0 3px 9px rgba(0, 0, 0, .5);}
+.yy-alert .a-header{background: #d2322d;color: #fff;padding:6px 10px;border-bottom: 1px solid #e5e5e5;}
+.a-header .ah-title{font-size: 14px;display: inline-block;}
+.ah-title:hover{cursor: move;}
+.yy-alert .a-content{width: 100%;font-size: 14px;background: #fff;}/*dialog.png*/
+.a-content .ac-con{position: relative;padding: 15px;}
+.ac-con .ac-message{display: inline-block;word-break: break-all;}
+.a-content .ac-btns{border-top: 1px solid #e5e5e5;}
+.ab-box{padding: 5px 15px;text-align: right;}
+.ac-btns .b-sure,.ac-btns .b-cancel{
+	display: inline-block;
+    padding: 3px 12px;
+    color:#fff;
+    cursor: pointer;
+    background: #88b93c;
+    border-color: #88b93c;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;font-size: 12px;}
+.ac-btns .b-cancel{background: #ececec;margin-left: 5px;color: #333}
+.b-cancel:hover, .b-cancel:focus, .b-cancel:active{border-color: #adadad;background: #cccccc;}
+.b-sure:hover, .b-sure:focus, .b-sure:active{background: #719a32;border-color: #398439;}
+.bacgblue{background: #fea223 !important;}
+.bggreen{background: #88b93c !important;position:relative;}
+.ac-btns .anniublue{background: #fea223;border-color: #fea223;}
+.ac-btns .anniublue:hover{background: #df850a;border-color: #c67403;}
+.ac-btns .anniugred{background: #d2322d;border-color: #d2322d;}
+.ac-btns .anniugred:hover{background: #c3211c;border-color: #af1510;}
+.a-header .ah-close {
+margin-top: -2px;
+}
+.ah-close {
+float: right;
+font-size: 21px;
+font-weight: bold;
+line-height: 1;
+color: #000;
+text-shadow: 0 1px 0 #fff;
+filter: alpha(opacity=20);
+opacity: .2;
+position:absolute;
+right:8px;
+top:5px;
+}
+.ah-close:hover,.ah-close:focus{color: #000;
+text-decoration: none;
+cursor: pointer;
+filter: alpha(opacity=50);
+opacity: .5;}
+
+
+
+
+
+
